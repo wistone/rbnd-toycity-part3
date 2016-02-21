@@ -1,0 +1,19 @@
+How long did you spend working on this project?
+
+almost 1.5 hours
+
+
+What was the most rewarding challenge you conquered?
+
+use class to describe the world
+
+
+What two additional features did you build? Why?
+
+1. print transactions
+2. return product from transactions, add error for no transaction
+
+
+Where do you still have room to grow?
+
+think in advance to design the class by real need
