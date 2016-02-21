@@ -1,3 +1,5 @@
+require_relative "errors"
+
 class Product
 	@@products = []
 
@@ -5,7 +7,7 @@ class Product
 	def initialize(options={})
 		@@products.each do |product|
 			if product.title == options[:title]
-				raise DumplecatedProductError
+				raise DuplicateProductError, options[:title] + " already exists!"
 			end
 		end
 		@title = options[:title]
