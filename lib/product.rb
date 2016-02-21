@@ -8,7 +8,7 @@ class Product
 	def initialize(options={})
 		@@products.each do |product|
 			if product.title == options[:title]
-				raise DuplicateProductError, options[:title] + " already exists!"
+				raise DuplicateProductError, "'#{options[:title]}' already exists!"
 			end
 		end
 		@title = options[:title]
@@ -22,6 +22,9 @@ class Product
 	def in_stock?
 		@stock > 0
 	end
+	def print
+ 		"title: " + @title + ", price: " + @price.to_s + ", stock: " + @stock.to_s
+	end
   def self.all
     @@products
   end
@@ -34,5 +37,11 @@ class Product
 	end
 	def self.in_stock
 		@@products_in_stock
+	end
+	def conduct_transaction
+		@stock -= 1
+	end
+	def delete_transaction
+		@stock += 1
 	end
 end
