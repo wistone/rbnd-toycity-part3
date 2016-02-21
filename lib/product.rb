@@ -4,7 +4,7 @@ class Product
 	@@products = []
 	@@products_in_stock = []
 
-	attr_accessor :title, :price, :stock 
+	attr_reader :title, :price, :stock
 	def initialize(options={})
 		@@products.each do |product|
 			if product.title == options[:title]
